@@ -1,2 +1,2 @@
 # password
-makes passweods
+makes passwords
