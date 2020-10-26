@@ -2,7 +2,7 @@
 var u = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
 var l = ["abcdefghijklmnopqrstuvwxyz"]
 var n = ["0123456789"]
-var s = ["!@#$%^&*"]
+var s = ["!@#$%^&*()-=_+[]{};:'"]
 
 
 
@@ -18,21 +18,33 @@ var s = false;
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+//function writePassword() {
 
 console.log("passwordLength");
-  // ask for pw length
-var passwordLength = window.prompt("how long would you like to make your password between 8 and 128 characters?", "8");
+  // Ask for pw length
+var pLength = window.prompt("how long would you like to make your password between 8 and 128 characters?", "8");
  
-// checking for length if true proceide if true ask for 
+// Checking for length if true proceide if true ask for 
 if(length >= 8 && length < 129 );
+
+// Ask if UPPERCASE is needed
+ var u = window.confirm("Do you want UPPERCASE letters in your password?");
+
+// Ask id lowercase is needed
+ var l = window.confirm("Do you want lowercase letters in your password?");
+
+// Ask if numbers are needed
  var n = window.confirm("Do you want numbers in your password?");
- // if false, request
-}
+
+// Ask if special characters are needed
+ var s = window.confirm("Do you want special characters (!@#$%^&*()-=_+[]{};:') in your password?");
 
 
-  //
-  var password = generatePassword()
+
+
+
+  
+ //  var password = generatePassword()
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
